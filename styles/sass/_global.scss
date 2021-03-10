@@ -1,0 +1,107 @@
+// Colours!
+$purple: #4C0341;
+$mauve: #FAE5FF;
+$orange: #FE6F19;
+$white: #FFFFFF;
+$black: #0D0D0D;
+$brown: #882C07;
+
+//Strip Styles + global styles
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+    overflow-x:hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    width: auto;
+}
+
+i {
+    color: $purple;
+}
+
+.button {
+    text-decoration: none;
+    color: white;
+    background-color: $brown;
+    padding: 10px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 220px;
+    border: 2px solid $brown;
+}
+
+.button:hover,
+.button:focus,
+.button:focus-within {
+    border: 2px solid $orange;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.pageWrapper {
+    max-width: 1980px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+textarea {
+    resize: none;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    background-color: $brown;
+}
+
+footer a {
+    color: white;
+    display: inline;
+}
+
+.mauveBackground {
+    background-color: $mauve;
+}
+
+//Mixins
+@mixin fontSetup ($fontSize, $fontWeight, $letterSpace:normal, $lineHeight:normal, $fontColor:$purple) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    letter-spacing: $letterSpace;
+    line-height: $lineHeight;
+    color: $fontColor;
+}
+
+
+
+
+
+
+
+
+

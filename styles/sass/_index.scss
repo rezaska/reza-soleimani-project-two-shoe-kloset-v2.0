@@ -1,0 +1,162 @@
+// What is under the sea? SECTION -----------------
+.flexSea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 250px 0;
+
+    &__item {
+        text-align: center;
+        margin: 15px 0;
+    }
+}
+
+//New additions - 2 x 2 with IMAGES grid SECTION ----------------
+.flexgrid {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    &__main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__sub {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex: 1 1 50%;
+        padding: 50px 100px;
+        min-height: 350px;
+        min-width: 390px;
+    }
+
+    &__sub.bottom {
+        align-items: flex-end;
+        h3,
+        p {
+            text-align: right;
+        }
+    }
+
+    &__sub * {
+        margin: 15px 0;
+    }
+
+    &__img {
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+
+    &__img.top {
+        background-image: url(../assets/grid1.jpg);
+        left: -10%;
+        top: -30px;
+        box-shadow: 30px 30px 0px 0px $orange;
+    }
+
+    &__img.bottom {
+        background-image: url(../assets/grid2.jpg);
+        right: -10%;
+        box-shadow: -30px 30px 0px 0px $orange;
+    }
+}
+
+.flexBottom {
+    flex-direction: row-reverse;
+    
+}
+
+// Locations, community, etc. 2 x 2 with ICONS grid SECTION ----------------
+.flexicon {
+    padding: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__item {
+        flex: 1 0 50%;
+    }
+
+    &__title {
+        display: flex;
+
+        .fa-stack { 
+            font-size: 2.5rem; 
+            margin-top: 10px;
+            padding: 10px;
+            flex: 1 0 auto;
+        }
+
+        .fa-stack-1x {
+            color: $white;
+        }
+        
+        i { 
+            vertical-align: middle; 
+        }
+    }
+
+    &__content{
+        min-width: 260px;
+        padding: 20px;
+
+        a:hover {
+            transform: scale(1.1) translateX(25px);
+        }
+    }
+}
+
+//Popular this month SECTION -----------------------
+.popular {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 75px 0;
+    align-items: center;
+    justify-content: center;
+
+    &__img {
+        flex: 1 0 25%;
+        max-width: 500px;
+        min-width: 200px;
+        padding-right: 30px;
+
+        img {
+            box-shadow: 28px 28px 0px 0px $orange;
+        }
+    }
+
+    &__content {
+        width: 75%;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__content * {
+        padding-bottom: 20px;
+    }
+
+    &__content a {
+        margin-top: 20px;
+    }
+}
+
+// Gallery SECTION ---------------------
+.gallery {
+    &__list {
+        padding: 100px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: 30%;
+        max-width: 395px;
+    }
+}

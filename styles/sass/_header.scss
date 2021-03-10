@@ -1,0 +1,114 @@
+header.index{
+    background-image: url(../assets/headerBackground.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    // position: relative;
+}
+
+header.blog{
+    background-image: url(../assets/blogHeaderBackground.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 65vh;
+} 
+
+header.contact {
+    background-image: url(../assets/contactHeaderBackground.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+}
+
+.skipLink {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 999;
+    color: black;
+    background-color: white; 
+} 
+
+.skipLink:focus {
+    left: 10px;
+    color: $purple;
+    background-color: $mauve;
+}
+
+.topFlex {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+// nav styles
+nav {
+    z-index: 10;
+
+    input[type=checkbox],
+    i.fa-bars {
+        display: none;
+    }
+
+
+    .menu {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+
+        &__link {
+            @include fontSetup(2rem, 700, 1px, 2.9rem, black);
+            text-transform: uppercase;
+            padding: 10px 20px;
+
+            &:focus-within,
+            &:hover {
+                background-color: $purple;
+                color: white;
+            }
+        }
+    }
+}
+
+// Main page header styles
+.headerFlexContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8rem;
+
+    h1 {
+        width: 25%; 
+        margin-left: 10%;    
+    }
+
+    .headerImg {
+        // max-width: 50vw;
+        // max-height: 50vw;
+        max-width: 950px;
+        max-height: 950px;
+    }
+}
+
+// blog header styles
+.blog {
+    .titleBlog {
+        position: absolute;
+        left: 40%;  
+    }
+}
+
+// Contact page header styles
+.titleContact {
+    width: 400px;
+    margin: 0 0 0 40px;
+}
+
+
+
+
+

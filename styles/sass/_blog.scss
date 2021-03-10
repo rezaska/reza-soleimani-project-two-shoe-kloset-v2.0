@@ -1,0 +1,180 @@
+.flexBlog {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+
+    &__left{
+        flex: 1 0 50px;
+        margin: 5% 2% 2% 8%;
+        max-width: 500px;
+        
+        ul {
+            list-style: disc;
+            padding-left: 20px;
+            color: $black;
+
+            a {
+                color: $black;
+                border-bottom: 2px solid white;
+
+                &:hover,
+                &:focus {
+                    border-bottom: 2px solid $mauve;
+                }
+            }
+        }
+
+        .sidebar {
+            background-color: $white;
+            padding: 0 50px 30px 30px;
+            padding-top: 105%;
+            position: relative;
+
+            h3 {
+                margin-top: 40px;
+            }
+
+            img {
+            width: 125%;
+            position: absolute;
+            right: 5%;
+            top: -20px;
+            }
+
+        }
+
+        h3, 
+        p {
+            padding: 10px 0;
+        }
+
+    }
+
+    &__right {
+        flex: 2 0 auto;
+        margin-left: 50px;
+        max-width: 60%;
+        transform: translateY(-200px);
+
+        p {
+            margin-bottom: 30px;
+        }
+
+        p.blogInfo {
+            font-weight: 700;
+        }
+
+        .blogPost {
+            background-color: $white;
+            display: flex;
+            flex-direction: column;
+
+            &__img {
+                position: relative;
+                width: calc(100% - 40px);
+                left: 40px;
+                top: -140px;
+                
+                h1 {
+                    margin: 0;
+                }
+
+                img {   
+                    box-shadow: -40px 40px 0px 0px $orange;
+                }
+            }
+
+            &__text {
+                position: relative;
+                top: -50px;
+                padding-left: 50px;
+                padding-right: 10%;
+            }
+        } 
+    }
+}
+
+// Comments SECTION -------------------------------
+.blogComments {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 120px 3fr;
+    grid-template-rows: 80px 2fr 2fr;
+    gap: 30px;
+    margin-right: 10%;
+
+    &__title {
+        grid-column: span 2;
+    }
+
+    &__img {
+        padding-left: 30px;
+        padding-top:10px;
+    }
+
+    &__date {
+        font-weight: 700;
+    }
+}
+
+// FORM SECTION ---------------------
+.blogForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 200px;
+    gap: 50px;
+    margin-right: 10%;
+    
+
+    input[type="text"],
+    input[type="email"] {
+        padding-left: 10px;
+        border: none;
+        background-color: $mauve;
+        border-bottom: 2px solid $orange;
+
+        &:hover,
+        &:focus {
+            border: 2px solid $orange;
+            background-color: white;
+        }
+    }
+
+    textarea {
+        background-color: $mauve;
+        border: 2px solid $orange;
+
+        &:focus,
+        &:hover {
+        border: 2px solid $orange;
+        background-color: white;
+    }
+
+    }
+
+    textarea,
+    button {
+        grid-column: span 2;
+        padding: 10px;
+    }
+
+    .blogButton {
+        text-decoration: none;
+        color: white;
+        background-color: $purple;
+        text-align: center;
+        text-transform: uppercase;
+        border: 2px solid $purple;
+
+        &:focus,
+        &:hover {
+            border: 2px solid $orange;
+            background-color: $brown;
+        }
+
+    }
+
+    ::placeholder {
+        opacity: 1;
+    }
+}
